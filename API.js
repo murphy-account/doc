@@ -10,22 +10,22 @@ const path = require('path')
 // })
 
 // // 获取目标文件信息
-// fs.stat('a.txt',(err,stats)=>{
-//     if(err)throw err;
-//     console.log(stats.isFile());
-//     console.log(stats.isDirectory());
-//     console.log(stats.size);
-// })
+fs.stat('a.txt',(err,stats)=>{
+    if(err)throw err;
+    console.log(stats.isFile());
+    console.log(stats.isDirectory());
+    console.log(stats.size);
+})
 
 // //创建文件夹
-// fs.mkdir('a/b/',err=>{
-//     if(!err){
-//         console.log('success');
-//     }else{
-//         console.log(err);
-//     }
-// // 目录不存在就会报错
-// })
+fs.mkdir('a/b/',err=>{
+    if(!err){
+        console.log('success');
+    }else{
+        console.log(err);
+    }
+// 目录不存在就会报错
+})
 
 // //删除空文件夹
 // fs.rmdir('a/b',(err)=>{
@@ -34,12 +34,12 @@ const path = require('path')
 // })
 
 // //删除非空文件夹
-// fs.rmdir('a/b',{recursive:true},(err)=>{
-//     if(!err)console.log('success');
-//     console.log(err);
-// })
+fs.rmdir('a/b',{recursive:true},(err)=>{
+    if(!err)console.log('success');
+    console.log(err);
+})
 
-// //读取目录
+//读取目录
 // fs.readdir('a',(err,files)=>{
 //     if(!err)console.log(files);
 // })
